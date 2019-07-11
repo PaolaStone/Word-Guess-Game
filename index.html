@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+
+<html>
+
+    <head>
+        <title>Word Guess Game</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+        
+        var myWord = ["Saab", "Volvo", "BMW"];
+        var charNumber = [];
+        var userLetter = [];
+        
+        
+        //get random word
+        var randomWord = myWord[Math.floor(Math.random() * myWord.length)];
+        console.log(randomWord);
+        
+        
+        //display _ _ _
+        for (var i = 0; i < randomWord.length; i++) {
+       
+            document.write("_ ")
+
+            charNumber[i] = randomWord.charAt(i);
+            
+                    
+        } 
+        
+        console.log(charNumber) 
+        console.log(userLetter)
+
+        //enter letter and compare to randomWord
+
+        for (var j=0; j < 3; j++)  {
+           userLetter[j] = prompt("Enter a letter ")
+           //just compares till first found letter
+           if (randomWord.indexOf(userLetter[j]) !== -1) {
+              console.log(randomWord.indexOf(userLetter[j]));
+               alert("letter found")
+               k = randomWord.indexOf(userLetter[j])
+               document.write(randomWord.charAt(k))
+           } 
+                         
+               
+           }
+           
+
+                
+        //console.log(userLetter)
+
+       //document.onkeyup = function(event) {
+        //var userLetter = event.key;
+        
+        
+        
+        
+
+        
+            
+        </script>
+    </body>
+
+</html>
