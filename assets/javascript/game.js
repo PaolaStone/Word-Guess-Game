@@ -1,27 +1,22 @@
 
-var myWord = ["Saab", "Volvo", "BMW"];
-        var charNumber = [];
-        var userLetter = [];
-        
-       
+var word = ["NEYTIRI", "COLONEL_MILES_QUARITCH", "AKWEY" , "EYTUKAN" , "MOAT" , "NORM_SPELLMAN" , "GRACE" , "TSUTEY" ,"JAKE SULLY" , "TRUDY_CHACON" , "PARKER SELFRIDGE" , "MAX PATEL"];
+  var charNumber = [];
+  var userLetter = [];
+  var underscore = " ";
+  
+  //get random word
+  var randomWord = word[Math.floor(Math.random() * word.length)];
+  document.getElementById("word").innerHTML = "underscores go here";
+  console.log(randomWord);
 
-      
+  for (var i = 0; i < randomWord.length; i++) {
+    charNumber[i] = randomWord.charAt(i);
+    console.log(charNumber[i]);
+    document.getElementById("word").innerHTML = ("_ ".repeat (i))
+               
+  } 
 
-        //get random word
-        var randomWord = myWord[Math.floor(Math.random() * myWord.length)];
-        console.log(randomWord);
-        
-        
-        //display _ _ _
-        for (var i = 0; i < randomWord.length; i++) {
-       
-            
-            
-            charNumber[i] = randomWord.charAt(i);
-            console.log(randomWord[i] = ("_ "));
 
-                    
-        } 
         
         
         console.log(charNumber) 
@@ -39,36 +34,17 @@ var myWord = ["Saab", "Volvo", "BMW"];
                document.write(randomWord.charAt(k))
            } 
                          
-               
+              
            }
-           
-                
-                        
-           
-           
-              for (i = 0; i < 26; i++) {
+                   
 
-                
-                var li = document.createElement("li");
-                li.innerHTML =  (i+10).toString(36) + " ";
-                //li.style.listStyle = "click";
-                li.style.display = "inline";
-                //document.getElementById("button").addEventListener('click', li);
-                document.getElementById("letter").appendChild(li).style.border = "thick solid #0000FF";
-                                
-             }
-             
-             
-             //console.log(letter)
-             
+           var whenClick = function(){
+            alert('clicked!');
+            document.getElementsByTagName("button").disabled = "true";
+            }
 
-       
 
-                
-        //console.log(userLetter)
-
-       //document.onkeyup = function(event) {
-        //var userLetter = event.key;
+        
         
         
         
