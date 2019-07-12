@@ -1,28 +1,25 @@
 
-var word = ["NEYTIRI", "COLONEL_MILES_QUARITCH", "AKWEY" , "EYTUKAN" , "MOAT" , "NORM_SPELLMAN" , "GRACE" , "TSUTEY" ,"JAKE SULLY" , "TRUDY_CHACON" , "PARKER SELFRIDGE" , "MAX PATEL"];
+var word = ["NEYTIRI", "COLONEL_MILES_QUARITCH", "AKWEY", "EYTUKAN", "MOAT", "NORM_SPELLMAN", "GRACE", "TSUTEY","JAKE_SULLY", "TRUDY_CHACON", "PARKER_SELFRIDGE", "MAX_PATEL"];
   var charNumber = [];
   var userLetter = [];
   var underscore = " ";
   
   //get random word
   var randomWord = word[Math.floor(Math.random() * word.length)];
-  document.getElementById("word").innerHTML = "underscores go here";
+  
   console.log(randomWord);
 
-  for (var i = 0; i < randomWord.length; i++) {
+  for (var i = 0; i <= randomWord.length; i++) {
     charNumber[i] = randomWord.charAt(i);
     console.log(charNumber[i]);
-    document.getElementById("word").innerHTML = ("_ ".repeat (i))
+    document.getElementById("underscore").innerHTML = ("_ ".repeat (i))
                
   } 
 
+  console.log(charNumber) 
+  console.log(userLetter)
 
-        
-        
-        console.log(charNumber) 
-        console.log(userLetter)
-
-        //enter letter and compare to randomWord
+    //enter letter and compare to randomWord
 
         for (var j=0; j < 3; j++)  {
            userLetter[j] = prompt("Enter a letter ")
