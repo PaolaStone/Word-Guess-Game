@@ -7,65 +7,83 @@
         <title>Word Guess Game</title>
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+        
     </head>
 
     <body>
 
-        <script type="text/javascript">
-        
-        var myWord = ["Saab", "Volvo", "BMW"];
-        var charNumber = [];
-        var userLetter = [];
-        
-        
-        //get random word
-        var randomWord = myWord[Math.floor(Math.random() * myWord.length)];
-        console.log(randomWord);
-        
-        
-        //display _ _ _
-        for (var i = 0; i < randomWord.length; i++) {
+        <div class="container-fluid">
        
-            document.write("_ ")
+        <h1 class="text-center">Word Guess</h1>
 
-            charNumber[i] = randomWord.charAt(i);
-            
-                    
-        } 
+        </div>
+
+        <div class="row">
+             <div class="col-md-4">
+                <h2>your wins</h2>
+             </div>
+
+             <div class="col-md-4">
+                <h2>word to be guessed </h2>
+                
+             </div>
+
+             <div class="col-md-4">
+                    <h2>My wins</h2>
+             </div>
+
+        </div>
+
         
-        console.log(charNumber) 
-        console.log(userLetter)
+        <div class="row">
+            <div class="col-md-4">
+                <h2>your avatar</h2>
+             </div>
 
-        //enter letter and compare to randomWord
+             <div class="col-md-4">
+                 <h2> Info about word to be guessed</h2>
+             </div>
 
-        for (var j=0; j < 3; j++)  {
-           userLetter[j] = prompt("Enter a letter ")
-           //just compares till first found letter
-           if (randomWord.indexOf(userLetter[j]) !== -1) {
-              console.log(randomWord.indexOf(userLetter[j]));
-               alert("letter found")
-               k = randomWord.indexOf(userLetter[j])
-               document.write(randomWord.charAt(k))
-           } 
-                         
-               
-           }
-           
+             <div class="col-md-4">
+                 <h2>my avatar</h2>
+             </div>
+
+     </div>
+
+        
+        <div class="container-fluid col-md-12 text-center">
+               <h3>Alphabet</h3>
+            <div id="container"></div>
+            <div id="letter">
+                <button onclick="disabled()"><A:link></A:link></button>
 
                 
-        //console.log(userLetter)
+            </div>
 
-       //document.onkeyup = function(event) {
-        //var userLetter = event.key;
-        
-        
-        
-        
+        </div>
 
-        
+        <div class="row text-center">
             
-        </script>
+            <div class="progress col-md-12 fixed-bottom">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+ 
+         </div>
+        
+
+
+
+       <script type="text/javascript" src="assets\javascript\game.js"></script>
+       
     </body>
 
 </html>
