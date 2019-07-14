@@ -12,8 +12,13 @@ var underscore = " ";
   var randomWord = word[Math.floor(Math.random() * word.length)];
   console.log(randomWord);
   
+  
 
 // This is to display the underscores
+
+
+
+   
 for (var i = 0; i <= randomWord.length; i++) {
   charNumber[i] = randomWord.charAt(i);
   //console.log(charNumber[i]);
@@ -23,8 +28,8 @@ for (var i = 0; i <= randomWord.length; i++) {
 // This is to create the alphabet buttons
 
 function buttons (){
-  for (var i = 0; i < alphabet.length; i++){
-    document.getElementById("btn").innerHTML += "<button>" + alphabet[i] +"</button>";
+  for (var j = 0; j < alphabet.length; j++){
+    document.getElementById("btn").innerHTML += "<button>" + alphabet[j] +"</button>";
     
   }
 }
@@ -35,18 +40,39 @@ buttons()
 var clicked = document.getElementsByTagName("button");
 
 function addtoev (){
-  for (i=0; i < clicked.length; i++){
-    clicked[i].addEventListener("click", function(){
-      alert("clicked");
-      console.log(this.disabled = true);
-      console.log(this.textContent) 
-    });
+  for (k=0; k < clicked.length; k++){
+    clicked[k].addEventListener("click", function(){
+      this.disabled = true;
+      console.log(letter = this.textContent);
+       
+      var pos = 0;
+      var num = -1;
+      var l = -1;
+      var graf = randomWord
+       
     
+      while (pos != -1) {
+        console.log(pos = graf.indexOf(letter, l + 1));
+        num += 1;
+        l = pos;
+      }
+      
+    console.log(graf+"<br>")
+    console.log("There were " + num + " matches in that word.");
+
+      
+    })
+
   }
-}
+}      
+
+
 window.addEventListener("load",function() {
   addtoev();
 });
+
+
+
 
 
 
