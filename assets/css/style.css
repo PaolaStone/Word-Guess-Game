@@ -1,5 +1,20 @@
-.underscore{
-    text-decoration-color: transparent;
-    text-decoration: underline;
+* {
+    box-sizing: border-box;
+}
+
+.body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.div{
+    text-align: center;
 
 }
+ 
+ 
+.img{
+    width: 10px;
+    height: 290px;
+    margin-right: 20px;
+    display: block;
+    align-self: auto;
+    }
