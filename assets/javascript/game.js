@@ -1,44 +1,78 @@
 
 var word = ["NEYTIRI", "COLONEL_MILES_QUARITCH", "AKWEY", "EYTUKAN", "MOAT", "NORM_SPELLMAN", "GRACE", "TSUTEY","JAKE_SULLY", "TRUDY_CHACON", "PARKER_SELFRIDGE", "MAX_PATEL"];
-  var charNumber = [];
-  var userLetter = [];
-  var underscore = " ";
-  
-  //get random word
+var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
+var charNumber = [];
+var userLetter = [];
+var underscore = " ";
+var counter = 0
+
+var alphabetBtn = [];
+
+
+//This is to get random word from the word array
   var randomWord = word[Math.floor(Math.random() * word.length)];
-  
   console.log(randomWord);
+  
 
-  for (var i = 0; i <= randomWord.length; i++) {
-    charNumber[i] = randomWord.charAt(i);
-    console.log(charNumber[i]);
-    document.getElementById("underscore").innerHTML = ("_ ".repeat (i))
-               
-  } 
+// This is to display the underscores
+for (var i = 0; i <= randomWord.length; i++) {
+  charNumber[i] = randomWord.charAt(i);
+  //console.log(charNumber[i]);
+  document.getElementById("underscore").innerHTML = ("_ ".repeat (i))
+} 
 
-  console.log(charNumber) 
-  console.log(userLetter)
+  
+// This is to create the alphabet buttons
+function buttons (){
+  for (var i = 0; i < alphabet.length; i++){
+    document.getElementById("btn").innerHTML += "<button>" + alphabet[i] +"</button>";
+  }
+}
 
-    //enter letter and compare to randomWord
+buttons();
 
-        for (var j=0; j < 3; j++)  {
-           userLetter[j] = prompt("Enter a letter ")
-           //just compares till first found letter
-           if (randomWord.indexOf(userLetter[j]) !== -1) {
-              console.log(randomWord.indexOf(userLetter[j]));
-               alert("letter found")
-               k = randomWord.indexOf(userLetter[j])
-               document.write(randomWord.charAt(k))
-           } 
-                         
-              
-           }
-                   
 
-           var whenClick = function(){
-            alert('clicked!');
-            document.getElementsByTagName("button").disabled = "true";
-            }
+// This is to disable the buttons
+
+function disableButton () {
+  var allButtons = document.getElementsByTagName("button")
+  console.log(allButtons)
+
+  var allButtons = document.addEventListener("click", console.log("should get disabled"));
+  console.log(allButtons)
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+
+ 
+
+
+ 
+
+
+     
+    
+
+  
+
 
 
         
