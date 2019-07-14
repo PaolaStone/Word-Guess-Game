@@ -1,23 +1,24 @@
 
-var word = ["NEYTIRI", "COLONEL_MILES_QUARITCH", "AKWEY", "EYTUKAN", "MOAT", "NORM_SPELLMAN", "GRACE", "TSUTEY","JAKE_SULLY", "TRUDY_CHACON", "PARKER_SELFRIDGE", "MAX_PATEL"];
-var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
-var charNumber = [];
+var word = ["NEYTIRI",  "AKWEY", "EYTUKAN", "MOAT", "GRACE", "TSUTEY","ANEMONOID","DINICTHOID",	"ARACHNOID",	"DIREHORSE",	"LIZARD",	"HEXAPEDE",	"PROLEMURIS",	"SLINGER",	"STINGBAT",	"TEYLU",	"THANATOR",	"VIPERWOLF",	"STURMBEEST",	"TETRAPTERON"];
 
+var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var charNumber = [];
+var underscoreGuess = [];
 
 
 //This is to get random word from the word array
   var randomWord = word[Math.floor(Math.random() * word.length)];
   console.log(randomWord);
   
-  
+//document.onkeyup = function(event) {
 
 // This is to display the underscores
-for (var i = 0; i <= randomWord.length; i++) {
-  charNumber[i] = randomWord.charAt(i);
-  document.getElementById("underscore").innerHTML += (changeToUnderscore = charNumber[i].replace(randomWord[i], "_ "));
-  //console.log(charNumber[i]);
+for ( i = 0; i < randomWord.length; i++) {
+  console.log(underscoreGuess[i]= "_ ");
+  document.getElementById("underscore").innerHTML += underscoreGuess[i];
 
 } 
+
 
 
 
@@ -28,6 +29,7 @@ function buttons (){
     
   }
 }
+
 buttons()
 
 
@@ -52,7 +54,7 @@ function addtoev (){
       }
            
       
-    console.log(changeToUnderscore = randomWord)  
+    //console.log(changeToUnderscore = randomWord)  
     console.log(randomWord)
     console.log("There were " + num + " matches in that word.");
     
@@ -67,52 +69,5 @@ window.addEventListener("load",function() {
   addtoev();
 });
 
+//}
 
-
-
-
-
-
-        
-    
-
-
-  
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-
- 
-
- 
-
-
- 
-
-
-     
-    
-
-  
-
-
-
-        
-        
-        
-        
-        
-
-        
