@@ -2,11 +2,10 @@
 var word = ["NEYTIRI", "COLONEL_MILES_QUARITCH", "AKWEY", "EYTUKAN", "MOAT", "NORM_SPELLMAN", "GRACE", "TSUTEY","JAKE_SULLY", "TRUDY_CHACON", "PARKER_SELFRIDGE", "MAX_PATEL"];
 var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
 var charNumber = [];
-var userLetter = [];
 var underscore = " ";
-var counter = 0
 
-var alphabetBtn = [];
+
+
 
 
 //This is to get random word from the word array
@@ -21,28 +20,41 @@ for (var i = 0; i <= randomWord.length; i++) {
   document.getElementById("underscore").innerHTML = ("_ ".repeat (i))
 } 
 
-  
 // This is to create the alphabet buttons
+
 function buttons (){
   for (var i = 0; i < alphabet.length; i++){
     document.getElementById("btn").innerHTML += "<button>" + alphabet[i] +"</button>";
+    
   }
 }
+buttons()
 
-buttons();
+// This is to get the letter and disable it
 
+var clicked = document.getElementsByTagName("button");
 
-// This is to disable the buttons
-
-function disableButton () {
-  var allButtons = document.getElementsByTagName("button")
-  console.log(allButtons)
-
-  var allButtons = document.addEventListener("click", console.log("should get disabled"));
-  console.log(allButtons)
+function addtoev (){
+  for (i=0; i < clicked.length; i++){
+    clicked[i].addEventListener("click", function(){
+      alert("clicked");
+      console.log(this.disabled = true);
+      console.log(this.textContent) 
+    });
+    
   }
-  
-  
+}
+window.addEventListener("load",function() {
+  addtoev();
+});
+
+
+
+
+        
+    
+
+
   
 
 
