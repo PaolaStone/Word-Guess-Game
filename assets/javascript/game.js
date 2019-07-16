@@ -48,17 +48,21 @@ function addtoev (){
       var pos = 0;
       var num = -1;
       var l = -1;
-
+      // console.log(userRightGuess = Array.from(underscoreGuess))
+      
       while (pos != -1) {
         console.log(pos = randomWord.indexOf(letter, l + 1));
         num += 1;
         l = pos;
-             
+        console.log(userRightGuess[pos] = letter);
+        console.log(userRightGuess)
         underscoreGuess[pos] = letter;
-        
+        document.getElementById("underscore").innerHTML = underscoreGuess.join("",underscoreGuess);
       }
-      console.log(underscoreGuess)
-      document.getElementById("underscore").innerHTML += underscoreGuess[i];
+      
+
+      
+      
       
       
     
