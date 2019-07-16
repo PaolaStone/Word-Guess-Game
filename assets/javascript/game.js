@@ -4,13 +4,16 @@ var word = ["NEYTIRI",  "AKWEY", "EYTUKAN", "MOAT", "GRACE", "TSUTEY","ANEMONOID
 var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var charNumber = [];
 var underscoreGuess = [];
+var userRightGuess = [];
 
 
 //This is to get random word from the word array
   var randomWord = word[Math.floor(Math.random() * word.length)];
   console.log(randomWord);
   
-//document.onkeyup = function(event) {
+
+  //document.onkeyup = function(event) {
+
 
 // This is to display the underscores
 for ( i = 0; i < randomWord.length; i++) {
@@ -18,8 +21,6 @@ for ( i = 0; i < randomWord.length; i++) {
   document.getElementById("underscore").innerHTML += underscoreGuess[i];
 
 } 
-
-
 
 
 // This is to create the alphabet buttons
@@ -42,19 +43,25 @@ function addtoev (){
       this.disabled = true;
       console.log(letter = this.textContent);
        
+
+//This is to check all the letters in the randomword
       var pos = 0;
       var num = -1;
       var l = -1;
+
       while (pos != -1) {
         console.log(pos = randomWord.indexOf(letter, l + 1));
         num += 1;
         l = pos;
-                   
-
+             
+        underscoreGuess[pos] = letter;
+        
       }
-           
+      console.log(underscoreGuess)
+      document.getElementById("underscore").innerHTML += underscoreGuess[i];
       
-    //console.log(changeToUnderscore = randomWord)  
+      
+    
     console.log(randomWord)
     console.log("There were " + num + " matches in that word.");
     
