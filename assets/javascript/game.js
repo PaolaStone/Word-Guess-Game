@@ -41,35 +41,34 @@ function addtoev (){
   for (k=0; k < clicked.length; k++){
     clicked[k].addEventListener("click", function(){
       this.disabled = true;
-      console.log(letter = this.textContent);
+      letter = this.textContent
        
 
 //This is to check all the letters in the randomword
       var pos = 0;
       var num = -1;
       var l = -1;
-      // console.log(userRightGuess = Array.from(underscoreGuess))
+      
       
       while (pos != -1) {
         console.log(pos = randomWord.indexOf(letter, l + 1));
         num += 1;
         l = pos;
-        console.log(userRightGuess[pos] = letter);
-        console.log(userRightGuess)
+        // console.log(userRightGuess[pos] = letter);
+        
         underscoreGuess[pos] = letter;
         document.getElementById("underscore").innerHTML = underscoreGuess.join("",underscoreGuess);
+        userRightGuess[pos] = letter;
+        
       }
       
-
-      
-      
-      
-      
+      if (comparing = underscoreGuess.includes("_ ")){
+        } else {
+          alert("end of game")
+        };
+            
+          
     
-    console.log(randomWord)
-    console.log("There were " + num + " matches in that word.");
-    
-      
     })
 
   }
