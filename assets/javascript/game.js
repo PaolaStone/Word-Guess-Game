@@ -19,6 +19,7 @@
       function restart() {
         document.getElementById("btn").innerHTML = " ";
         document.getElementById("underscore").innerHTML = " ";
+        underscoreGuess = [];
       }
          
       if (lifes < 10 ){
@@ -120,9 +121,6 @@
         });
 
       } 
-    //   else{
-    //     alert("no more lifes")
-    //  }
     
     }
    else {
