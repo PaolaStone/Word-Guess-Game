@@ -85,7 +85,7 @@
                 if (lifes === 9){
                   losses++
                   document.getElementById("loss").innerHTML = losses;
-                  confirm("Do you wan to continue");
+                  confirm("Do you want to continue?");
                     restart();
                     buttons();
                     generateWord();
@@ -98,7 +98,7 @@
                 } else {                  
                   wins++;
                   document.getElementById("win").innerHTML = wins
-                  confirm("Do you wan to continue");
+                  confirm("Do you want to continue?");
                     restart();
                     buttons();
                     generateWord();
