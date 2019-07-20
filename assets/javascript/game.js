@@ -14,7 +14,7 @@
         wantTocontinue = "";
 
             
-      if (confirm("Do you wan to continue")){
+      if (confirm("Do you want to continue?")){
    
       function restart() {
         document.getElementById("btn").innerHTML = " ";
@@ -98,7 +98,7 @@
                 } else {                  
                   wins++;
                   document.getElementById("win").innerHTML = wins
-                  confirm("Do you want to continue?");
+                  confirm("Do you want to continue");
                     restart();
                     buttons();
                     generateWord();
